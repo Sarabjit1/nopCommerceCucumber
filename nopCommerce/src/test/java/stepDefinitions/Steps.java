@@ -11,6 +11,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import pageObjects.AddCustomerPage;
+import pageObjects.CustomerRoleUpdatePage;
 import pageObjects.LoginPage;
 import pageObjects.SearchCustomerPage;
 
@@ -165,6 +166,18 @@ public class Steps extends BaseClass
 	    boolean status = searchCust.searchCustomerByEmail("victoria_victoria@nopCommerce.com");
 	    Assert.assertEquals(true, status);
 	}
+	
+	
+	//Step Definitions for customer role page
+	@Then("User click on Customer Role")
+	public void user_click_on_customer_role() {
+		custUpdateRole = new CustomerRoleUpdatePage(driver);
+		custUpdateRole.clickRoles();
+		
+	   
+	}
+	
+	
 
 
 

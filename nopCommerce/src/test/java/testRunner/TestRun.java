@@ -8,7 +8,7 @@ import io.cucumber.junit.CucumberOptions;
 
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = ".//Features/",
+@CucumberOptions(features = ".//Features/CustomerRoleUpdate.feature",
                  glue = "stepDefinitions", 
                  dryRun = false,
                 // tags= {"@sanity"},
